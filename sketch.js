@@ -10,18 +10,14 @@ function setup() {
   weight = random(400,1500)
   car.velocityX = speed
   car.shapeColor = "white"
-// wall.shapeColor = "green"
 }
 
 function draw() {
   background("black"); 
-  // car.x = mouseX
-
+  
   if(wall.x-car.x <= car.width/2+wall.width/2){
     car.velocityX = 0
-    damage = (0.50*weight*speed*speed)/22500
-    // wall.shapeColor = "red"
-  
+    damage = (0.50*weight*speed*speed)/22500  
   }
 
   if(damage<=100){
@@ -32,5 +28,4 @@ function draw() {
     car.shapeColor = "red"
   }
   drawSprites();
-  // Text(damage,200,200)
 }
